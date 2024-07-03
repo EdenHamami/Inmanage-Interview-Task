@@ -1,3 +1,4 @@
+
 <?php
 require 'Database.php';
 
@@ -57,18 +58,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table posts: " . $conn->error . "<br>";
 }
 
-// Create the post_counts table
-$sql = "CREATE TABLE IF NOT EXISTS post_counts (
-    date DATE,
-    hour INT,
-    post_count INT
-)";
-echo $sql . "<br>";
-if ($conn->query($sql) === TRUE) {
-    echo "Table post_counts created successfully<br>";
-} else {
-    echo "Error creating table post_counts: " . $conn->error . "<br>";
-}
 
 $conn->close();
 ?>
